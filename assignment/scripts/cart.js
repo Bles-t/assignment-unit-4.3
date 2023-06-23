@@ -3,11 +3,47 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 
 
+basket = []
+const maxItems = 5
+function addItem(item) {
+    if (basket.push(item) >= maxItems) {
+        return true
+    }
+    return true
+}
+console.log();
+console.log(addItem("lion"));
+console.log(addItem("bats"));
+console.log(addItem("tiger"));
+console.log(addItem("pig"));
 
 
+function listItems(basket) {
+    for (element of basket) {
+        console.log(element);
+    }
+    return basket
+}
+console.log(listItems(basket));
+////  this is comm
+// function empty() {
+//     basket = []
+//     return basket
+// }
+// console.log(empty(basket));
+
+// Stretch Goals
 
 
+function isFull() {
+    if (basket.length < maxItems) {
+        return false
 
+    } else (basket.length >= maxItems); {
+        return true
+    }
+}
+console.log(isFull(this.basket));
 
 
 
@@ -25,6 +61,6 @@ try {
         isFull: typeof isFull !== 'undefined' ? isFull : undefined,
         removeItem: typeof removeItem !== 'undefined' ? removeItem : undefined,
     };
-} catch(e) {
+} catch (e) {
     // Do nothing
 }
